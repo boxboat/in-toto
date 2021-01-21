@@ -83,6 +83,7 @@ class Layout(Signable):
   _type = attr.ib()
   steps = attr.ib()
   inspect = attr.ib()
+  cacerts = attr.ib()
   keys = attr.ib()
   expires = attr.ib()
   readme = attr.ib()
@@ -93,6 +94,7 @@ class Layout(Signable):
     self._type = "layout"
     self.steps = kwargs.get("steps", [])
     self.inspect = kwargs.get("inspect", [])
+    self.cacerts = kwargs.get("cacerts", [])
     self.keys = kwargs.get("keys", {})
     self.readme = kwargs.get("readme", "")
 
